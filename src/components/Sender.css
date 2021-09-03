@@ -13,7 +13,9 @@
   
 }
 body{
-  background-color:#f8ecec;
+
+  background-color:#fafafa;
+
 }
 .wrapper{
   width: 100%;
@@ -76,23 +78,23 @@ textarea.form-control {
 }
 
 .button {
-  font-family: "Poppins-Regular";
-  border-radius: 20px;
-  background-color: #ffffff;
-  border: 1px solid ;
-  color: #ffffff;
-  text-align: center;
-  font-size: 16px;
-  padding: 10px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-  background-image: linear-gradient(to right, blue,purple) ;
+  border-radius: 100rem;
+  padding: 1rem;
+  font-family: 'Avenir Next';
+  font-size: 1rem;
+  padding: .5rem 3rem;
+  color: black;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 3px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #78e4ff, #ff48fa);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fff inset;
 }
-
-
-
+button.button:hover {
+  box-shadow: none;
+  color: white;
+}
 
 .button span {
   cursor: pointer;
@@ -194,6 +196,8 @@ textarea.form-control {
   border: 1px solid #dfdfdf;
   background-color: #ffffff;
 
+  border-radius: 5%;
+  height:428px;
 
 }
 .rating-sub{
@@ -204,37 +208,46 @@ textarea.form-control {
   margin-right: 13px;
   border: 1px solid #dfdfdf;
   background-color: #ffffff;
-  margin-top: 70px;
+
   padding-top: 30px;
   text-align: center;
-  box-shadow: 2px 2px 2px 2px;
   border-radius: 5%;
+  height: 428px;
+  align-items: center;
+
+
 }
 .form{
   float:left !important;
   border: 1px solid #dfdfdf;
   background-color: #ffffff;
+
+  border-radius: 5%;
+
 }
 .pr{
   margin-left:15px;
   margin-right: 15px;
   padding-bottom:30px ;
-  align-items: center;;
+
+  align-items: center;
 }
+
 .button-pr{
-  font-family: "Poppins-Regular";
-  border-radius: 20px;
-  background-color: #ffffff;
-  border: 1px solid ;
-  color: #ffffff;
-  text-align: center;
-  font-size: 16px;
-  padding: 10px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-  background-image: linear-gradient(to right, blue,purple) ;
+  border-radius: 100rem;
+  padding: 1rem;
+  font-family: 'Avenir Next';
+  font-size: 1rem;
+  padding: .5rem 3rem;
+  color: black;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 3px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #78e4ff, #ff48fa);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fff inset;
+  margin-top:100px;
+
 }
 .main{
   width: 100%;
@@ -242,3 +255,19 @@ textarea.form-control {
 .text-sub{
   margin:20px;
 }
+
+.pr-func{
+  margin-top: 20px;
+}
+.time-form{
+  width:30%;
+  float:left;
+  outline-style: none;
+  height: 42px;
+  border-bottom: 1px solid ;
+  padding:18px;
+  margin: center-align;
+  color:black ;
+  border-radius: 20px;
+}
+
