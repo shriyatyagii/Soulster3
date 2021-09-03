@@ -13,7 +13,9 @@
   
 }
 body{
+
   background-color:#fafafa;
+
 }
 .wrapper{
   width: 100%;
@@ -193,8 +195,10 @@ button.button:hover {
   margin-right:15px;
   border: 1px solid #dfdfdf;
   background-color: #ffffff;
+
   border-radius: 5%;
   height:428px;
+
 }
 .rating-sub{
   margin: 20px;
@@ -204,22 +208,28 @@ button.button:hover {
   margin-right: 13px;
   border: 1px solid #dfdfdf;
   background-color: #ffffff;
+
   padding-top: 30px;
   text-align: center;
   border-radius: 5%;
   height: 428px;
   align-items: center;
+
+
 }
 .form{
   float:left !important;
   border: 1px solid #dfdfdf;
   background-color: #ffffff;
+
   border-radius: 5%;
+
 }
 .pr{
   margin-left:15px;
   margin-right: 15px;
   padding-bottom:30px ;
+
   align-items: center;
 }
 
@@ -237,6 +247,7 @@ button.button:hover {
   background-clip: content-box, border-box;
   box-shadow: 2px 1000px 1px #fff inset;
   margin-top:100px;
+
 }
 .main{
   width: 100%;
@@ -244,6 +255,7 @@ button.button:hover {
 .text-sub{
   margin:20px;
 }
+
 .pr-func{
   margin-top: 20px;
 }
@@ -258,3 +270,4 @@ button.button:hover {
   color:black ;
   border-radius: 20px;
 }
+

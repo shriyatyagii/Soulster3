@@ -35,7 +35,7 @@ const TransactionItemView: FC<TransactionItemViewProps> = ({ transaction }) => {
       amount = meta.preBalances[0] - meta.postBalances[0];
       
      
-      
+      amount = amount/1000000000;
       
 
 
