@@ -36,7 +36,6 @@ function App() {
   return (
     <div className="app-body">
       <div className="app-body-top">
-        <h3>Send Money on Solana</h3>
         <Sender didSendMoney={didSendMoney} />
       </div>
       <div className="app-body-mid">
