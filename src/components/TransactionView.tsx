@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { TransactionWithSignature } from "../helpers/transactions";
 import "./TransactionView.css";
+import {arr, receiverUpdatedBalance} from "../helpers/wallet";
 
 interface TransactionsViewProps {
   transactions?: Array<TransactionWithSignature>;
@@ -19,23 +20,22 @@ const TransactionsView: FC<TransactionsViewProps> = ({ transactions }) => {
 interface TransactionItemViewProps {
   transaction: TransactionWithSignature;
 }
-const TransactionItemView: FC<TransactionItemViewProps> = ({ transaction }) => {
-  
+
+const TransactionItemView: FC<TransactionItemViewProps> = ({ transaction }) => { 
   
   const getTransactionItems = () => {
     const signature = transaction.signature?.toString();
-  
     const meta = transaction.confirmedTransaction.meta;
     const trans = transaction.confirmedTransaction.transaction;
     let amount = 0;
-    
+    let sum;
 
 
     if (meta) {
       amount = meta.preBalances[0] - meta.postBalances[0];
-      
+      sum = (receiverUpdatedBalance - arr[0] )/1000000000;
      
-      amount = amount/1000000000;
+      //amount = amount/1000000000;
       
 
 
@@ -53,9 +53,14 @@ const TransactionItemView: FC<TransactionItemViewProps> = ({ transaction }) => {
 
         
         <li key={signature + "amount"}>
-          <label>Sent Amount:</label>&nbsp;
+          <label>Sent Amount(Stream + Performance):</label>&nbsp;
           {amount}
         </li>
+        <li key={signature + "sum"}>
+          <label>Sum (in Sol):</label>&nbsp;
+          {sum}
+        </li>
+
         <li key={signature + "sender"}>
           <label>Sender:</label>&nbsp;
           {trans.instructions[0].keys[0].pubkey.toBase58()}

@@ -11,6 +11,8 @@ import {
 } from "@solana/web3.js";
 import EventEmitter from "eventemitter3";
 
+export var receiverUpdatedBalance: number;
+export var arr = new Array(0);
 export interface WalletAdapter extends EventEmitter {
   publicKey: PublicKey | null;
   signTransaction: (transaction: Transaction) => Promise<Transaction>;
@@ -43,6 +45,11 @@ export async function sendMoney(
     const receiverAccountInfo = await connection.getAccountInfo(destPubkey);
     console.log("receiver data size", receiverAccountInfo?.data.length);
 
+    const receiverInitialBalance = await connection.getBalance(destPubkey);
+    console.log("receiver starting balance: ", receiverInitialBalance);
+    arr.push(receiverInitialBalance);
+    console.log(arr);
+
     const instruction = SystemProgram.transfer({
       fromPubkey: wallet!.publicKey!,
       toPubkey: destPubkey,
@@ -53,6 +60,9 @@ export async function sendMoney(
     let signature = await signAndSendTransaction(wallet, trans);
     let result = await connection.confirmTransaction(signature, "singleGossip");
     console.log("money sent", result);
+
+    receiverUpdatedBalance = await connection.getBalance(destPubkey);
+    console.log("receiver Updated balance: ", receiverUpdatedBalance);
   } catch (e) {
     console.warn("Failed", e);
   }

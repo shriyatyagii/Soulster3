@@ -32,14 +32,6 @@ export async function getTransactions(
   return transactions;
 }
 
-/*let divideVars: (depositAmount: number, time: number) => number = function (
-  depositAmount: number,
-  time: number
-): number {
-  var ratePerTransaction = depositAmount/time;
-  return ratePerTransaction;
-};*/
-
 
 export async function divideVars(
   depositAmount: number,
