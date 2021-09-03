@@ -22,7 +22,8 @@ const Sender: React.FC<SenderProps> = ({ didSendMoney }) => {
   timeInMil = timeA * 60000; //converting days into miliseconds
   intervalsInMilSec = timeInMil/intervals;
 // eslint-disable-next-line
-  const amountperInterval = (amount/timeInMil)*intervalsInMilSec;
+  var amount1 = amount*1000000000;
+  var amountperInterval = amount1/intervals;
 
 
   
